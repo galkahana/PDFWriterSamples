@@ -1,0 +1,30 @@
+# Compiled source #
+###################
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+#*.lib
+*.pdb
+*.ilk
+BuildLog.htm
+*.obj
+*.idb
+
+_.swp
+
+#Visual Studio unwanted#
+########################
+*.user
+*.ncb
+*.suo
+*.pch
+*.dep
+*.manifest
+*.manifest.res
+
+#unwanted other sources #
+########################
+PDFWriter
