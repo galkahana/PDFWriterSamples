@@ -12,7 +12,7 @@ using namespace std;
 #include "ResourcesDictionary.h"
 // end pdfwriter library includes
 
-static const wstring scBasePath =  L"C:\\Users\\gal\\Documents\\Visual Studio 2008\\Projects\\PDFWriterSamples\\BasicImageAndText\\Materials\\";
+static const wstring scBasePath =  L"..\\BasicImageAndText\\Materials\\";
 static const wstring scSystemFontsPath = L"C:\\windows\\fonts\\";
 
 int main(int argc, wchar_t* argv[])

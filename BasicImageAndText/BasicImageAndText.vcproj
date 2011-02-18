@@ -137,7 +137,7 @@
 				Name="VCLinkerTool"
 				AdditionalDependencies="..\PDFWriter\Binaries\$(PlatformName)\$(ConfigurationName)\PDFWriter.lib ..\PDFWriter\Binaries\$(PlatformName)\$(ConfigurationName)\zlib.lib ..\PDFWriter\Binaries\$(PlatformName)\$(ConfigurationName)\libtiff.lib ..\PDFWriter\Binaries\$(PlatformName)\$(ConfigurationName)\freetype.lib"
 				LinkIncremental="1"
-				GenerateDebugInformation="true"
+				GenerateDebugInformation="false"
 				SubSystem="1"
 				OptimizeReferences="2"
 				EnableCOMDATFolding="2"

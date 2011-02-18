@@ -12,7 +12,7 @@ using namespace std;
 #include "XObjectContentContext.h"
 // end pdfwriter library includes
 
-static const wstring scBasePath =  L"C:\\Users\\gal\\Documents\\Visual Studio 2008\\Projects\\PDFWriterSamples\\DrawingShapes\\Materials\\";
+static const wstring scBasePath =  L"..\\DrawingShapes\\Materials\\";
 
 
 int main(int argc, wchar_t* argv[])
