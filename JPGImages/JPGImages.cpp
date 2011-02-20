@@ -121,7 +121,6 @@ int main(int argc, wchar_t* argv[])
 		if(status != eSuccess)
 			break;
 
-
 		status = pdfWriter.WritePageAndRelease(pdfPage);
 		if(status != eSuccess)
 			break;
