@@ -11,6 +11,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "JPGImages", "JPGImages\JPGI
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "UsingText", "UsingText\UsingText.vcproj", "{F7C8A108-FED1-47D8-8FB8-652DAD1CC7D7}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MakingComments", "MakingComments\MakingComments.vcproj", "{7532D080-D42C-49DD-9CE1-2D30A81A898C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -37,6 +39,10 @@ Global
 		{F7C8A108-FED1-47D8-8FB8-652DAD1CC7D7}.Debug|Win32.Build.0 = Debug|Win32
 		{F7C8A108-FED1-47D8-8FB8-652DAD1CC7D7}.Release|Win32.ActiveCfg = Release|Win32
 		{F7C8A108-FED1-47D8-8FB8-652DAD1CC7D7}.Release|Win32.Build.0 = Release|Win32
+		{7532D080-D42C-49DD-9CE1-2D30A81A898C}.Debug|Win32.ActiveCfg = Debug|Win32
+		{7532D080-D42C-49DD-9CE1-2D30A81A898C}.Debug|Win32.Build.0 = Debug|Win32
+		{7532D080-D42C-49DD-9CE1-2D30A81A898C}.Release|Win32.ActiveCfg = Release|Win32
+		{7532D080-D42C-49DD-9CE1-2D30A81A898C}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
