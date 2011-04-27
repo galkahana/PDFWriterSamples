@@ -13,6 +13,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "UsingText", "UsingText\Usin
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MakingComments", "MakingComments\MakingComments.vcproj", "{7532D080-D42C-49DD-9CE1-2D30A81A898C}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "EmbeddingPDFs", "EmbeddingPDFs\EmbeddingPDFs.vcproj", "{78EB980D-8EAC-472B-89D4-E643A80B45C9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -43,6 +45,10 @@ Global
 		{7532D080-D42C-49DD-9CE1-2D30A81A898C}.Debug|Win32.Build.0 = Debug|Win32
 		{7532D080-D42C-49DD-9CE1-2D30A81A898C}.Release|Win32.ActiveCfg = Release|Win32
 		{7532D080-D42C-49DD-9CE1-2D30A81A898C}.Release|Win32.Build.0 = Release|Win32
+		{78EB980D-8EAC-472B-89D4-E643A80B45C9}.Debug|Win32.ActiveCfg = Debug|Win32
+		{78EB980D-8EAC-472B-89D4-E643A80B45C9}.Debug|Win32.Build.0 = Debug|Win32
+		{78EB980D-8EAC-472B-89D4-E643A80B45C9}.Release|Win32.ActiveCfg = Release|Win32
+		{78EB980D-8EAC-472B-89D4-E643A80B45C9}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

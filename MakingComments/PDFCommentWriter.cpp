@@ -14,7 +14,7 @@ PDFCommentWriter::PDFCommentWriter(PDFWriter* inPDFWriter)
 
 void PDFCommentWriter::ListenOnPageWrites()
 {
-	mPDFWriter->GetDocumentContext().SetDocumentContextExtender(this);
+	mPDFWriter->GetDocumentContext().AddDocumentContextExtender(this);
 }
 
 PDFCommentWriter::~PDFCommentWriter(void)
