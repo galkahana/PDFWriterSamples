@@ -1,0 +1,272 @@
+%PDFHummus-1.0
+1 0 obj
+<<
+	/Type /PDFWriter
+	/mObjectsContext 2 0 R
+	/mDocumentContext 3 0 R
+>>
+endobj
+2 0 obj
+<<
+	/Type /ObjectsContext
+	/mReferencesRegistry 4 0 R
+	/mCompressStreams true
+	/mSubsetFontsNamesSequance 5 0 R
+>>
+endobj
+4 0 obj
+<<
+	/Type /IndirectObjectsReferenceRegistry
+	/mObjectsWritesRegistry [ 6 0 R 7 0 R 8 0 R 9 0 R 10 0 R 11 0 R ]
+>>
+endobj
+6 0 obj
+<<
+	/Type /ObjectWriteInformation
+	/mObjectWritten false
+	/mObjectReferenceType 0
+>>
+endobj
+7 0 obj
+<<
+	/Type /ObjectWriteInformation
+	/mObjectWritten true
+	/mWritePosition 16
+	/mObjectReferenceType 1
+>>
+endobj
+8 0 obj
+<<
+	/Type /ObjectWriteInformation
+	/mObjectWritten true
+	/mWritePosition 170
+	/mObjectReferenceType 1
+>>
+endobj
+9 0 obj
+<<
+	/Type /ObjectWriteInformation
+	/mObjectWritten false
+	/mObjectReferenceType 1
+>>
+endobj
+10 0 obj
+<<
+	/Type /ObjectWriteInformation
+	/mObjectWritten true
+	/mWritePosition 191
+	/mObjectReferenceType 1
+>>
+endobj
+11 0 obj
+<<
+	/Type /ObjectWriteInformation
+	/mObjectWritten false
+	/mObjectReferenceType 1
+>>
+endobj
+5 0 obj
+<<
+	/Type /UppercaseSequance
+	/mSequanceString (AAAAAA)
+>>
+endobj
+3 0 obj
+<<
+	/Type /DocumentContext
+	/mTrailerInformation 12 0 R
+	/mCatalogInformation 13 0 R
+	/mUsedFontsRepository 14 0 R
+>>
+endobj
+12 0 obj
+<<
+	/Type /TrailerInformation
+	/mPrev 0
+	/mRootReference 0
+	/mEncryptReference 0
+	/mInfoDictionary 15 0 R
+	/mInfoDictionaryReference 0
+>>
+endobj
+15 0 obj
+<<
+	/Type /InfoDictionary
+	/Title ()
+	/Author ()
+	/Subject ()
+	/Keywords ()
+	/Creator ()
+	/Producer ()
+	/CreationDate <<
+		/Type /Date
+		/Year -1
+		/Month -1
+		/Day -1
+		/Hour -1
+		/Minute -1
+		/Second -1
+		/UTC 3
+		/HourFromUTC -1
+		/MinuteFromUTC -1
+	>>
+	/ModDate <<
+		/Type /Date
+		/Year -1
+		/Month -1
+		/Day -1
+		/Hour -1
+		/Minute -1
+		/Second -1
+		/UTC 3
+		/HourFromUTC -1
+		/MinuteFromUTC -1
+	>>
+	/Trapped 2
+	/mAdditionalInfoEntries <<
+	>>
+>>
+endobj
+16 0 obj
+<<
+	/Type /PageTree
+	/mPageTreeID 5
+	/mIsLeafParent true
+	/mKidsIDs [ 4 ]
+>>
+endobj
+13 0 obj
+<<
+	/Type /CatalogInformation
+	/PageTreeRoot 16 0 R
+	/mCurrentPageTreeNode 16 0 R
+>>
+endobj
+14 0 obj
+<<
+	/Type /UsedFontsRepository
+	/mUsedFonts [ (C:\\windows\\fonts\\arial.ttf) 17 0 R ]
+	/mOptionaMetricsFiles [ ]
+>>
+endobj
+17 0 obj
+<<
+	/Type /PDFUsedFont
+	/mWrittenFont 18 0 R
+>>
+endobj
+18 0 obj
+<<
+	/Type /WrittenFontTrueType
+	/mANSIRepresentation 19 0 R
+>>
+endobj
+19 0 obj
+<<
+	/Type /WrittenFontRepresentation
+	/mGlyphIDToEncodedChar [ 0 20 0 R 3 21 0 R 43 22 0 R 58 23 0 R 71 24 0 R 72 25 0 R 79 26 0 R 82 27 0 R 85 28 0 R ]
+	/mWrittenObjectID 3
+>>
+endobj
+20 0 obj
+<<
+	/Type /GlyphEncodingInfo
+	/mEncodedCharacter 0
+	/mUnicodeCharacters [ 0 ]
+>>
+endobj
+21 0 obj
+<<
+	/Type /GlyphEncodingInfo
+	/mEncodedCharacter 32
+	/mUnicodeCharacters [ 32 ]
+>>
+endobj
+22 0 obj
+<<
+	/Type /GlyphEncodingInfo
+	/mEncodedCharacter 72
+	/mUnicodeCharacters [ 72 ]
+>>
+endobj
+23 0 obj
+<<
+	/Type /GlyphEncodingInfo
+	/mEncodedCharacter 87
+	/mUnicodeCharacters [ 87 ]
+>>
+endobj
+24 0 obj
+<<
+	/Type /GlyphEncodingInfo
+	/mEncodedCharacter 100
+	/mUnicodeCharacters [ 100 ]
+>>
+endobj
+25 0 obj
+<<
+	/Type /GlyphEncodingInfo
+	/mEncodedCharacter 101
+	/mUnicodeCharacters [ 101 ]
+>>
+endobj
+26 0 obj
+<<
+	/Type /GlyphEncodingInfo
+	/mEncodedCharacter 108
+	/mUnicodeCharacters [ 108 ]
+>>
+endobj
+27 0 obj
+<<
+	/Type /GlyphEncodingInfo
+	/mEncodedCharacter 111
+	/mUnicodeCharacters [ 111 ]
+>>
+endobj
+28 0 obj
+<<
+	/Type /GlyphEncodingInfo
+	/mEncodedCharacter 114
+	/mUnicodeCharacters [ 114 ]
+>>
+endobj
+xref
+0 29
+0000000000 65535 f
+0000000016 00000 n
+0000000111 00000 n
+0000001170 00000 n
+0000000249 00000 n
+0000001090 00000 n
+0000000384 00000 n
+0000000491 00000 n
+0000000618 00000 n
+0000000746 00000 n
+0000000853 00000 n
+0000000982 00000 n
+0000001311 00000 n
+0000002081 00000 n
+0000002189 00000 n
+0000001475 00000 n
+0000001980 00000 n
+0000002329 00000 n
+0000002399 00000 n
+0000002484 00000 n
+0000002684 00000 n
+0000002788 00000 n
+0000002894 00000 n
+0000003000 00000 n
+0000003106 00000 n
+0000003214 00000 n
+0000003322 00000 n
+0000003430 00000 n
+0000003538 00000 n
+trailer
+<<
+	/Size 29
+	/Root 1 0 R
+>>
+startxref
+3646
+%%EOF
