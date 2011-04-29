@@ -17,6 +17,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "EmbeddingPDFs", "EmbeddingP
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PauseAndContinue", "PauseAndContinue\PauseAndContinue.vcproj", "{5974D6E1-2F69-43FB-97DB-03C296348432}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Parsing", "Parsing\Parsing.vcproj", "{3FB22D39-6977-4EA4-9AD2-5E077735EAF0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -55,6 +57,10 @@ Global
 		{5974D6E1-2F69-43FB-97DB-03C296348432}.Debug|Win32.Build.0 = Debug|Win32
 		{5974D6E1-2F69-43FB-97DB-03C296348432}.Release|Win32.ActiveCfg = Release|Win32
 		{5974D6E1-2F69-43FB-97DB-03C296348432}.Release|Win32.Build.0 = Release|Win32
+		{3FB22D39-6977-4EA4-9AD2-5E077735EAF0}.Debug|Win32.ActiveCfg = Debug|Win32
+		{3FB22D39-6977-4EA4-9AD2-5E077735EAF0}.Debug|Win32.Build.0 = Debug|Win32
+		{3FB22D39-6977-4EA4-9AD2-5E077735EAF0}.Release|Win32.ActiveCfg = Release|Win32
+		{3FB22D39-6977-4EA4-9AD2-5E077735EAF0}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
