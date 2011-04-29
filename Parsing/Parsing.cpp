@@ -40,7 +40,7 @@ int wmain(int argc, wchar_t* argv[])
 		if(status != eSuccess)
 			break;
 		
-		wcout<<"PDF Header level = "<<parser.GetPagesCount()<<"\n";
+		wcout<<"PDF Header level = "<<parser.GetPDFLevel()<<"\n";
 		wcout<<"Number of objects in PDF = "<<parser.GetObjectsCount()<<"\n";
 		wcout<<"Number of pages in PDF = "<<parser.GetPagesCount()<<"\n";
 
