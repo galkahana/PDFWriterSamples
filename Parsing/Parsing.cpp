@@ -145,4 +145,5 @@ void ShowContentStream(PDFStreamInput* inStream,IByteReaderWithPosition* inPDFSt
 	}
 	else
 		wcout<<"Unable to read content stream\n";
+	delete streamReader;
 }
