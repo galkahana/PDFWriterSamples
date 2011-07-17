@@ -17,9 +17,13 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "EmbeddingPDFs", "EmbeddingP
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PauseAndContinue", "PauseAndContinue\PauseAndContinue.vcproj", "{5974D6E1-2F69-43FB-97DB-03C296348432}"
 EndProject
+<<<<<<< HEAD
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Links", "Links\Links.vcproj", "{B5E3568A-0F49-4591-B07E-16EC7DF4DD3B}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MergingUniquePDFPages", "MergingUniquePDFPages\MergingUniquePDFPages.vcproj", "{85F6A4CC-513F-4C2A-9E2B-38C2DF700E27}"
+=======
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Parsing", "Parsing\Parsing.vcproj", "{3FB22D39-6977-4EA4-9AD2-5E077735EAF0}"
+>>>>>>> d845e33bc34e775da9e89fe52451986c8756c83c
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -111,6 +115,7 @@ Global
 		{5974D6E1-2F69-43FB-97DB-03C296348432}.Release|Mixed Platforms.Build.0 = Release|Win32
 		{5974D6E1-2F69-43FB-97DB-03C296348432}.Release|Win32.ActiveCfg = Release|Win32
 		{5974D6E1-2F69-43FB-97DB-03C296348432}.Release|Win32.Build.0 = Release|Win32
+<<<<<<< HEAD
 		{B5E3568A-0F49-4591-B07E-16EC7DF4DD3B}.Debug|Any CPU.ActiveCfg = Debug|Win32
 		{B5E3568A-0F49-4591-B07E-16EC7DF4DD3B}.Debug|Mixed Platforms.ActiveCfg = Debug|Win32
 		{B5E3568A-0F49-4591-B07E-16EC7DF4DD3B}.Debug|Mixed Platforms.Build.0 = Debug|Win32
@@ -131,6 +136,12 @@ Global
 		{85F6A4CC-513F-4C2A-9E2B-38C2DF700E27}.Release|Mixed Platforms.Build.0 = Release|Win32
 		{85F6A4CC-513F-4C2A-9E2B-38C2DF700E27}.Release|Win32.ActiveCfg = Release|Win32
 		{85F6A4CC-513F-4C2A-9E2B-38C2DF700E27}.Release|Win32.Build.0 = Release|Win32
+=======
+		{3FB22D39-6977-4EA4-9AD2-5E077735EAF0}.Debug|Win32.ActiveCfg = Debug|Win32
+		{3FB22D39-6977-4EA4-9AD2-5E077735EAF0}.Debug|Win32.Build.0 = Debug|Win32
+		{3FB22D39-6977-4EA4-9AD2-5E077735EAF0}.Release|Win32.ActiveCfg = Release|Win32
+		{3FB22D39-6977-4EA4-9AD2-5E077735EAF0}.Release|Win32.Build.0 = Release|Win32
+>>>>>>> d845e33bc34e775da9e89fe52451986c8756c83c
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

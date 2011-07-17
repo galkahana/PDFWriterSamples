@@ -1,5 +1,5 @@
 Samples for "PDFWriter":https://github.com/galkahana/PDF-Writer project.
-i'm building blog that should have some walkthroughs.
+i'm building blog that should have some walkthroughs, here "PDFHummus":http://www.pdfhummus.com.
 To compile this solution you must also download the PDFWriter.zip package, 
 which has the PDFWriter library compiled to Win7 [which is probably good for any other non-ancient windows],
 then unzip it to the solution folder (where the sln file is) and you should be good to go.

@@ -15,7 +15,7 @@ using namespace std;
 static const wstring scBasePath =  L"..\\BasicImageAndText\\Materials\\";
 static const wstring scSystemFontsPath = L"C:\\windows\\fonts\\";
 
-int main(int argc, wchar_t* argv[])
+int wmain(int argc, wchar_t* argv[])
 {
 	PDFWriter pdfWriter;
 	EStatusCode status;

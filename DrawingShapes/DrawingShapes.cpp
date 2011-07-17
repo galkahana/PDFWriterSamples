@@ -15,7 +15,7 @@ using namespace std;
 static const wstring scBasePath =  L"..\\DrawingShapes\\Materials\\";
 
 
-int main(int argc, wchar_t* argv[])
+int wmain(int argc, wchar_t* argv[])
 {
 	PDFWriter pdfWriter;
 	EStatusCode status;
