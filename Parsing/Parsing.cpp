@@ -19,11 +19,13 @@ using namespace std;
 #include "IByteReader.h"
 // end pdfwriter library includes
 
-static const wstring scBasePath =  L"..\\Parsing\\Materials\\";
+using namespace PDFHummus;
+
+static const string scBasePath =  "..\\Parsing\\Materials\\";
 
 void ShowContentStream(PDFStreamInput* inStream,IByteReaderWithPosition* inPDFStream,PDFParser& inParser);
 
-int wmain(int argc, wchar_t* argv[])
+int main(int argc, char* argv[])
 {
 	EStatusCode status;
 	
@@ -32,7 +34,7 @@ int wmain(int argc, wchar_t* argv[])
 		PDFParser parser;
 		InputFile pdfFile;
 
-		status = pdfFile.OpenFile(scBasePath + L"XObjectContent.PDF");
+		status = pdfFile.OpenFile(scBasePath + "XObjectContent.PDF");
 		if(status != eSuccess)
 			break;
 

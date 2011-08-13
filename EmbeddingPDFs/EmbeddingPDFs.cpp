@@ -13,7 +13,9 @@ using namespace std;
 
 // end pdfwriter library includes
 
-static const wstring scBasePath =  L"..\\EmbeddingPDFs\\Materials\\";
+static const string scBasePath =  "..\\EmbeddingPDFs\\Materials\\";
+
+using namespace PDFHummus;
 
 EStatusCode EmbedAsPages()
 {
@@ -22,12 +24,12 @@ EStatusCode EmbedAsPages()
 
 	do
 	{
-		status = pdfWriter.StartPDF(scBasePath + L"EmbedAsPages.PDF",ePDFVersion13);
+		status = pdfWriter.StartPDF(scBasePath + "EmbedAsPages.PDF",ePDFVersion13);
 		if(status != eSuccess)
 			break;
 
 		// appending all pages of XObjectContent.pdf
-		status = pdfWriter.AppendPDFPagesFromPDF(scBasePath + L"XObjectContent.PDF",PDFPageRange()).first;
+		status = pdfWriter.AppendPDFPagesFromPDF(scBasePath + "XObjectContent.PDF",PDFPageRange()).first;
 		if(status != eSuccess)
 			break;
 
@@ -37,7 +39,7 @@ EStatusCode EmbedAsPages()
 		selectivePageRange.mSpecificRanges.push_back(ULongAndULong(0,3));
 		selectivePageRange.mSpecificRanges.push_back(ULongAndULong(5,10));
 
-		status = pdfWriter.AppendPDFPagesFromPDF(scBasePath + L"BasicTIFFImagesTest.PDF",selectivePageRange).first;
+		status = pdfWriter.AppendPDFPagesFromPDF(scBasePath + "BasicTIFFImagesTest.PDF",selectivePageRange).first;
 		if(status != eSuccess)
 			break;
 
@@ -64,12 +66,12 @@ EStatusCode UseAsXObjects()
 
 	do
 	{
-		status = pdfWriter.StartPDF(scBasePath + L"UseAsXObjects.PDF",ePDFVersion13);
+		status = pdfWriter.StartPDF(scBasePath + "UseAsXObjects.PDF",ePDFVersion13);
 		if(status != eSuccess)
 			break;
 
 		// creating XObjects for all pages of XObjectContent.pdf (2 pages)
-		EStatusCodeAndObjectIDTypeList result = pdfWriter.CreateFormXObjectsFromPDF(scBasePath + L"XObjectContent.PDF",PDFPageRange(),ePDFPageBoxMediaBox);
+		EStatusCodeAndObjectIDTypeList result = pdfWriter.CreateFormXObjectsFromPDF(scBasePath + "XObjectContent.PDF",PDFPageRange(),ePDFPageBoxMediaBox);
 		if(result.first != eSuccess)
 		{
 			status = eFailure;
@@ -128,7 +130,7 @@ EStatusCode UseAsXObjects()
 		selectivePageRange.mType = PDFPageRange::eRangeTypeSpecific;
 		selectivePageRange.mSpecificRanges.push_back(ULongAndULong(0,3));
 
-		result = pdfWriter.CreateFormXObjectsFromPDF(scBasePath + L"BasicTIFFImagesTest.PDF",selectivePageRange,ePDFPageBoxMediaBox);
+		result = pdfWriter.CreateFormXObjectsFromPDF(scBasePath + "BasicTIFFImagesTest.PDF",selectivePageRange,ePDFPageBoxMediaBox);
 		if(result.first != eSuccess)
 		{
 			status = eFailure;
@@ -199,18 +201,18 @@ EStatusCode UseCopyingContext()
 
 	do
 	{
-		status = pdfWriter.StartPDF(scBasePath + L"UseCopyingContext.PDF",ePDFVersion13);
+		status = pdfWriter.StartPDF(scBasePath + "UseCopyingContext.PDF",ePDFVersion13);
 		if(status != eSuccess)
 			break;
 
-		firstContext = pdfWriter.CreatePDFCopyingContext(scBasePath + L"XObjectContent.PDF");
+		firstContext = pdfWriter.CreatePDFCopyingContext(scBasePath + "XObjectContent.PDF");
 		if(!firstContext)
 		{
 			status = eFailure;
 			break;
 		}
 		 
-		secondContext = pdfWriter.CreatePDFCopyingContext(scBasePath + L"BasicTIFFImagesTest.PDF");
+		secondContext = pdfWriter.CreatePDFCopyingContext(scBasePath + "BasicTIFFImagesTest.PDF");
 		if(!firstContext)
 		{
 			status = eFailure;

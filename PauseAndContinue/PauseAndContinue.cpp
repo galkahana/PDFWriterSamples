@@ -9,8 +9,10 @@ using namespace std;
 #include "PDFPage.h"
 #include "PageContentContext.h"
 
-static const wstring scBasePath =  L"..\\PauseAndContinue\\Materials\\";
-static const wstring scSystemFontsPath = L"C:\\windows\\fonts\\";
+using namespace PDFHummus;
+
+static const string scBasePath =  "..\\PauseAndContinue\\Materials\\";
+static const string scSystemFontsPath = "C:\\windows\\fonts\\";
 
 int main(int argc, wchar_t* argv[])
 {
@@ -22,7 +24,7 @@ int main(int argc, wchar_t* argv[])
 		{
 			PDFWriter pdfWriterA;
 			
-			status = pdfWriterA.StartPDF(scBasePath + L"PauseAndContinue.pdf",ePDFVersion13);
+			status = pdfWriterA.StartPDF(scBasePath + "PauseAndContinue.pdf",ePDFVersion13);
 			if(status != eSuccess)
 				break;
 
@@ -33,7 +35,7 @@ int main(int argc, wchar_t* argv[])
 			// Create a content context for the page
 			PageContentContext* pageContentContext = pdfWriterA.StartPageContentContext(pdfPage);
 
-			PDFUsedFont* arialTTF = pdfWriterA.GetFontForFile(scSystemFontsPath + L"arial.ttf");
+			PDFUsedFont* arialTTF = pdfWriterA.GetFontForFile(scSystemFontsPath + "arial.ttf");
 			if(!arialTTF)
 			{
 				status = eFailure;
@@ -45,7 +47,7 @@ int main(int argc, wchar_t* argv[])
 			pageContentContext->BT();
 			pageContentContext->Tf(arialTTF,1);
 			pageContentContext->Tm(20,0,0,20,40,822);
-			pageContentContext->Tj(L"Hello World");
+			pageContentContext->Tj("Hello World");
 			pageContentContext->ET();				
 
 			// End content context, and write the page
@@ -57,7 +59,7 @@ int main(int argc, wchar_t* argv[])
 			if(status != eSuccess)
 				break;
 
-			status = pdfWriterA.Shutdown(scBasePath + L"PauseAndContinueTest.txt");
+			status = pdfWriterA.Shutdown(scBasePath + "PauseAndContinueTest.txt");
 			if(status != eSuccess)
 				break;
 		}
@@ -66,7 +68,7 @@ int main(int argc, wchar_t* argv[])
 		{
 			PDFWriter pdfWriterB;
 			
-			status = pdfWriterB.ContinuePDF(scBasePath + L"PauseAndContinue.pdf",scBasePath + L"PauseAndContinueTest.txt");
+			status = pdfWriterB.ContinuePDF(scBasePath + "PauseAndContinue.pdf",scBasePath + "PauseAndContinueTest.txt");
 			if(status != eSuccess)
 				break;
 
@@ -77,7 +79,7 @@ int main(int argc, wchar_t* argv[])
 			// Create a content context for the page
 			PageContentContext* pageContentContext = pdfWriterB.StartPageContentContext(pdfPage);
 
-			PDFUsedFont* arialTTF = pdfWriterB.GetFontForFile(scSystemFontsPath + L"arial.ttf");
+			PDFUsedFont* arialTTF = pdfWriterB.GetFontForFile(scSystemFontsPath + "arial.ttf");
 			if(!arialTTF)
 			{
 				status = eFailure;
@@ -89,7 +91,7 @@ int main(int argc, wchar_t* argv[])
 			pageContentContext->BT();
 			pageContentContext->Tf(arialTTF,1);
 			pageContentContext->Tm(20,0,0,20,40,822);
-			pageContentContext->Tj(L"Hello Again, World");
+			pageContentContext->Tj("Hello Again, World");
 			pageContentContext->ET();				
 
 			// End content context, and write the page

@@ -12,17 +12,19 @@ using namespace std;
 #include "ResourcesDictionary.h"
 // end pdfwriter library includes
 
-static const wstring scBasePath =  L"..\\BasicImageAndText\\Materials\\";
-static const wstring scSystemFontsPath = L"C:\\windows\\fonts\\";
+using namespace PDFHummus;
 
-int wmain(int argc, wchar_t* argv[])
+static const string scBasePath =  "..\\BasicImageAndText\\Materials\\";
+static const string scSystemFontsPath = "C:\\windows\\fonts\\";
+
+int main(int argc, char* argv[])
 {
 	PDFWriter pdfWriter;
 	EStatusCode status;
 
 	do
 	{
-		status = pdfWriter.StartPDF(scBasePath + L"BasicImageAndText.pdf",ePDFVersion13);
+		status = pdfWriter.StartPDF(scBasePath + "BasicImageAndText.pdf",ePDFVersion13);
 		if(status != eSuccess)
 			break;
 
@@ -31,7 +33,7 @@ int wmain(int argc, wchar_t* argv[])
 		pdfPage->SetMediaBox(PDFRectangle(0,0,595,842));
 
 		// Create an image object from image
-		PDFFormXObject* image = pdfWriter.CreateFormXObjectFromJPGFile(scBasePath + L"SanAntonioPass.JPG");
+		PDFFormXObject* image = pdfWriter.CreateFormXObjectFromJPGFile(scBasePath + "SanAntonioPass.JPG");
 		if(!image)
 		{
 			status = eFailure;
@@ -52,7 +54,7 @@ int wmain(int argc, wchar_t* argv[])
 
 
 		// Create a title text over the image
-		PDFUsedFont* arialTTF = pdfWriter.GetFontForFile(scSystemFontsPath + L"arial.ttf");
+		PDFUsedFont* arialTTF = pdfWriter.GetFontForFile(scSystemFontsPath + "arial.ttf");
 		if(!arialTTF)
 		{
 			status = eFailure;
@@ -63,7 +65,7 @@ int wmain(int argc, wchar_t* argv[])
 		pageContentContext->k(0,0,0,1);
 		pageContentContext->Tf(arialTTF,20);
 		pageContentContext->Tm(1,0,0,1,90,610);
-		pageContentContext->Tj(L"San Antonio Pass, Cordillera Huayhuash, Peru");
+		pageContentContext->Tj("San Antonio Pass, Cordillera Huayhuash, Peru");
 		pageContentContext->ET();				
 
 		// End content context, and write the page

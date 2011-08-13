@@ -12,16 +12,18 @@ using namespace std;
 #include "TIFFUsageParameters.h"
 // end pdfwriter library includes
 
-static const wstring scBasePath =  L"..\\PlayingWithTiffs\\Materials\\";
+using namespace PDFHummus;
 
-int wmain(int argc, wchar_t* argv[])
+static const string scBasePath =  "..\\PlayingWithTiffs\\Materials\\";
+
+int main(int argc, char* argv[])
 {
 	PDFWriter pdfWriter;
 	EStatusCode status;
 
 	do
 	{
-		status = pdfWriter.StartPDF(scBasePath + L"PlayingWithTiffs.pdf",ePDFVersion13);
+		status = pdfWriter.StartPDF(scBasePath + "PlayingWithTiffs.pdf",ePDFVersion13);
 		if(status != eSuccess)
 			break;
 
@@ -29,7 +31,7 @@ int wmain(int argc, wchar_t* argv[])
 		// Regaulr TIFF placement
 		PDFPage* pdfPage = new PDFPage();
 		pdfPage->SetMediaBox(PDFRectangle(0,0,595,842));
-		PDFFormXObject* image = pdfWriter.CreateFormXObjectFromTIFFFile(scBasePath + L"jim___ah.tif");
+		PDFFormXObject* image = pdfWriter.CreateFormXObjectFromTIFFFile(scBasePath + "jim___ah.tif");
 		if(!image)
 		{
 			status = eFailure;
@@ -55,7 +57,7 @@ int wmain(int argc, wchar_t* argv[])
 		tiffParams.PageIndex = 0;
 		
 		// Load first page
-		image = pdfWriter.CreateFormXObjectFromTIFFFile(scBasePath + L"multipage.tif",tiffParams);
+		image = pdfWriter.CreateFormXObjectFromTIFFFile(scBasePath + "multipage.tif",tiffParams);
 		if(!image)
 		{
 			status = eFailure;
@@ -66,7 +68,7 @@ int wmain(int argc, wchar_t* argv[])
 
 		// Load third page
 		tiffParams.PageIndex = 2;
-		image = pdfWriter.CreateFormXObjectFromTIFFFile(scBasePath + L"multipage.tif",tiffParams);
+		image = pdfWriter.CreateFormXObjectFromTIFFFile(scBasePath + "multipage.tif",tiffParams);
 		if(!image)
 		{
 			status = eFailure;
@@ -100,7 +102,7 @@ int wmain(int argc, wchar_t* argv[])
 		TIFFUsageParameters tiffParamsA;
 		tiffParamsA.BWTreatment.AsImageMask = 1;
 		tiffParamsA.BWTreatment.OneColor = CMYKRGBColor(255,128,0);
-		image = pdfWriter.CreateFormXObjectFromTIFFFile(scBasePath + L"jim___ah.tif",tiffParamsA);
+		image = pdfWriter.CreateFormXObjectFromTIFFFile(scBasePath + "jim___ah.tif",tiffParamsA);
 		if(!image)
 		{
 			status = eFailure;
@@ -138,7 +140,7 @@ int wmain(int argc, wchar_t* argv[])
 		tiffParamsB.GrayscaleTreatment.AsColorMap = true;
 		tiffParamsB.GrayscaleTreatment.OneColor = CMYKRGBColor(255,255,0,0);
 		tiffParamsB.GrayscaleTreatment.ZeroColor = CMYKRGBColor(0,0,0,0);
-		image = pdfWriter.CreateFormXObjectFromTIFFFile(scBasePath + L"jim___cg.tif",tiffParamsB);
+		image = pdfWriter.CreateFormXObjectFromTIFFFile(scBasePath + "jim___cg.tif",tiffParamsB);
 		if(!image)
 		{
 			status = eFailure;
@@ -151,7 +153,7 @@ int wmain(int argc, wchar_t* argv[])
 		tiffParamsB.GrayscaleTreatment.AsColorMap = true;
 		tiffParamsB.GrayscaleTreatment.OneColor = CMYKRGBColor(255,0,0,0);
 		tiffParamsB.GrayscaleTreatment.ZeroColor = CMYKRGBColor(0,255,0,0);
-		image = pdfWriter.CreateFormXObjectFromTIFFFile(scBasePath + L"jim___cg.tif",tiffParamsB);
+		image = pdfWriter.CreateFormXObjectFromTIFFFile(scBasePath + "jim___cg.tif",tiffParamsB);
 		if(!image)
 		{
 			status = eFailure;
@@ -161,7 +163,7 @@ int wmain(int argc, wchar_t* argv[])
 		delete image;
 
 		// plain grayscale
-		image = pdfWriter.CreateFormXObjectFromTIFFFile(scBasePath + L"jim___cg.tif");
+		image = pdfWriter.CreateFormXObjectFromTIFFFile(scBasePath + "jim___cg.tif");
 		if(!image)
 		{
 			status = eFailure;

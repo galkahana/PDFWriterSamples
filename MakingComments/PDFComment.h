@@ -15,8 +15,8 @@ public:
 	PDFComment(void);
 	~PDFComment(void);
 
-	wstring Text;
-	wstring CommentatorName;
+	string Text;
+	string CommentatorName;
 	double FrameBoundings[4];
 	CMYKRGBColor Color;
 	PDFDate Time;

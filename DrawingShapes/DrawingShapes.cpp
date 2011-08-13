@@ -12,10 +12,11 @@ using namespace std;
 #include "XObjectContentContext.h"
 // end pdfwriter library includes
 
-static const wstring scBasePath =  L"..\\DrawingShapes\\Materials\\";
+static const string scBasePath =  "..\\DrawingShapes\\Materials\\";
 
+using namespace PDFHummus;
 
-int wmain(int argc, wchar_t* argv[])
+int main(int argc, char* argv[])
 {
 	PDFWriter pdfWriter;
 	EStatusCode status;
@@ -23,7 +24,7 @@ int wmain(int argc, wchar_t* argv[])
 	do
 	{
 		// Initial Setup for file,page and page content
-		status = pdfWriter.StartPDF(scBasePath + L"DrawingShapes.pdf",ePDFVersion13);
+		status = pdfWriter.StartPDF(scBasePath + "DrawingShapes.pdf",ePDFVersion13);
 		if(status != eSuccess)
 			break;
 

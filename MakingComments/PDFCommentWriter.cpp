@@ -6,6 +6,8 @@
 #include "Trace.h"
 #include "SafeBufferMacrosDefs.h"
 
+using namespace PDFHummus;
+
 PDFCommentWriter::PDFCommentWriter(PDFWriter* inPDFWriter)
 {
 	mPDFWriter = inPDFWriter;

@@ -89,16 +89,16 @@ DoubleAndDoublePair sGetImageDimensions(const JPEGImageInformation& inJPGImageIn
 	return returnResult;
 }
 
-static const wstring scBasePath =  L"..\\JPGImages\\Materials\\";
+static const string scBasePath =  "..\\JPGImages\\Materials\\";
 
-int wmain(int argc, wchar_t* argv[])
+int main(int argc, char* argv[])
 {
 	PDFWriter pdfWriter;
 	EStatusCode status;
 
 	do
 	{
-		status = pdfWriter.StartPDF(scBasePath + L"JPGImages.pdf",ePDFVersion13);
+		status = pdfWriter.StartPDF(scBasePath + "JPGImages.pdf",ePDFVersion13);
 		if(status != eSuccess)
 			break;
 
@@ -106,7 +106,7 @@ int wmain(int argc, wchar_t* argv[])
 		pdfPage->SetMediaBox(PDFRectangle(0,0,595,842));
 
 		// Place JPG, first as a form
-		PDFFormXObject* image = pdfWriter.CreateFormXObjectFromJPGFile(scBasePath + L"SanAntonioPass.JPG");
+		PDFFormXObject* image = pdfWriter.CreateFormXObjectFromJPGFile(scBasePath + "SanAntonioPass.JPG");
 
 		PageContentContext* pageContentContext = pdfWriter.StartPageContentContext(pdfPage);
 
@@ -129,8 +129,8 @@ int wmain(int argc, wchar_t* argv[])
 		pdfPage->SetMediaBox(PDFRectangle(0,0,595,842));
 
 		// Now, as an image. determine dimensions based on library parsed information
-		PDFImageXObject* imageA = pdfWriter.CreateImageXObjectFromJPGFile(scBasePath + L"SanAntonioPass.JPG");
-		DoubleAndDoublePair dimensions = sGetImageDimensions(pdfWriter.GetDocumentContext().GetJPEGImageHandler().RetrieveImageInformation(scBasePath + L"SanAntonioPass.JPG").second);
+		PDFImageXObject* imageA = pdfWriter.CreateImageXObjectFromJPGFile(scBasePath + "SanAntonioPass.JPG");
+		DoubleAndDoublePair dimensions = sGetImageDimensions(pdfWriter.GetDocumentContext().GetJPEGImageHandler().RetrieveImageInformation(scBasePath + "SanAntonioPass.JPG").second);
 		
 		pageContentContext = pdfWriter.StartPageContentContext(pdfPage);
 

@@ -11,19 +11,21 @@ using namespace std;
 #include "PDFComment.h"
 #include "PDFCommentWriter.h."
 
+using namespace PDFHummus;
+
 // end pdfwriter library includes
 
-static const wstring scBasePath =  L"..\\MakingComments\\Materials\\";
-static const wstring scSystemFontsPath = L"C:\\windows\\fonts\\";
+static const string scBasePath =  "..\\MakingComments\\Materials\\";
+static const string scSystemFontsPath = "C:\\windows\\fonts\\";
 
-int wmain(int argc, wchar_t* argv[])
+int main(int argc, char* argv[])
 {
 	PDFWriter pdfWriter;
 	EStatusCode status;
 
 	do
 	{
-		status = pdfWriter.StartPDF(scBasePath + L"MakingComments.pdf",ePDFVersion16);
+		status = pdfWriter.StartPDF(scBasePath + "MakingComments.pdf",ePDFVersion16);
 		if(status != eSuccess)
 			break;
 
@@ -35,7 +37,7 @@ int wmain(int argc, wchar_t* argv[])
 		PageContentContext* pageContentContext = pdfWriter.StartPageContentContext(pdfPage);
 
 		// just put some text
-		PDFUsedFont* arialTTF = pdfWriter.GetFontForFile(scSystemFontsPath + L"arial.ttf");
+		PDFUsedFont* arialTTF = pdfWriter.GetFontForFile(scSystemFontsPath + "arial.ttf");
 		if(!arialTTF)
 		{
 			status = eFailure;
@@ -46,7 +48,7 @@ int wmain(int argc, wchar_t* argv[])
 		pageContentContext->BT();
 		pageContentContext->Tf(arialTTF,1);
 		pageContentContext->Tm(20,0,0,20,40,822);
-		pageContentContext->Tj(L"Text placed and scaled with Tm");
+		pageContentContext->Tj("Text placed and scaled with Tm");
 		pageContentContext->ET();				
 
 
@@ -61,8 +63,8 @@ int wmain(int argc, wchar_t* argv[])
 
 		PDFComment* aComment = new PDFComment();
 
-		aComment->Text = L"a very important comment";
-		aComment->CommentatorName = L"Someone";
+		aComment->Text = "a very important comment";
+		aComment->CommentatorName = "Someone";
 		aComment->FrameBoundings[0] = 100;
 		aComment->FrameBoundings[1] = 500;
 		aComment->FrameBoundings[2] = 200;
@@ -75,8 +77,8 @@ int wmain(int argc, wchar_t* argv[])
 
 		PDFComment* bComment = new PDFComment();
 
-		bComment->Text = L"I have nothing to say about this";
-		bComment->CommentatorName = L"Someone";
+		bComment->Text = "I have nothing to say about this";
+		bComment->CommentatorName = "Someone";
 		bComment->FrameBoundings[0] = 100;
 		bComment->FrameBoundings[1] = 100;
 		bComment->FrameBoundings[2] = 200;
@@ -89,8 +91,8 @@ int wmain(int argc, wchar_t* argv[])
 
 		PDFComment* cComment = new PDFComment();
 
-		cComment->Text = L"yeah. me too. it's just perfect";
-		cComment->CommentatorName = L"Someone Else";
+		cComment->Text = "yeah. me too. it's just perfect";
+		cComment->CommentatorName = "Someone Else";
 		cComment->FrameBoundings[0] = 150;
 		cComment->FrameBoundings[1] = 150;
 		cComment->FrameBoundings[2] = 250;

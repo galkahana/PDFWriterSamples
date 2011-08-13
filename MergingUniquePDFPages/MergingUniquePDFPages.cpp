@@ -13,8 +13,10 @@ using namespace std;
 
 // end pdfwriter library includes
 
-static const wstring scBasePath =  L"..\\MergingUniquePDFPages\\Materials\\";
-static const wstring scSystemFontsPath = L"C:\\windows\\fonts\\";
+using namespace PDFHummus;
+
+static const string scBasePath =  "..\\MergingUniquePDFPages\\Materials\\";
+static const string scSystemFontsPath = "C:\\windows\\fonts\\";
 
 EStatusCode SimplePageMerge()
 {
@@ -23,7 +25,7 @@ EStatusCode SimplePageMerge()
 
 	do
 	{
-		status = pdfWriter.StartPDF(scBasePath + L"SimplePageMerge.pdf",ePDFVersion13);
+		status = pdfWriter.StartPDF(scBasePath + "SimplePageMerge.pdf",ePDFVersion13);
 		if(status != eSuccess)
 			break;
 
@@ -34,11 +36,11 @@ EStatusCode SimplePageMerge()
 		singePageRange.mType = PDFPageRange::eRangeTypeSpecific;
 		singePageRange.mSpecificRanges.push_back(ULongAndULong(0,0));
 
-		status = pdfWriter.MergePDFPagesToPage(page,scBasePath + L"BasicTIFFImagesTest.PDF",singePageRange);
+		status = pdfWriter.MergePDFPagesToPage(page,scBasePath + "BasicTIFFImagesTest.PDF",singePageRange);
 		if(status != eSuccess)
 			break;
 
-		PDFUsedFont* font = pdfWriter.GetFontForFile(scSystemFontsPath + L"arial.ttf");
+		PDFUsedFont* font = pdfWriter.GetFontForFile(scSystemFontsPath + "arial.ttf");
 		if(!font)
 		{
 			status = eFailure;
@@ -51,7 +53,7 @@ EStatusCode SimplePageMerge()
 		pageContent->k(0,0,1,0);
 		pageContent->Tf(font,30);
 		pageContent->Tm(1,0,0,1,10,400);
-		status = pageContent->Tj(L"Some written text");
+		status = pageContent->Tj("Some written text");
 		if(status != eSuccess)
 			break;
 		pageContent->ET();
@@ -84,11 +86,11 @@ EStatusCode UseCopyingContext()
 
 	do
 	{
-		status = pdfWriter.StartPDF(scBasePath + L"UseCopyingContext.pdf",ePDFVersion13);
+		status = pdfWriter.StartPDF(scBasePath + "UseCopyingContext.pdf",ePDFVersion13);
 		if(status != eSuccess)
 			break;
 
-		PDFDocumentCopyingContext* copyingContext = pdfWriter.CreatePDFCopyingContext(scBasePath + L"BasicTIFFImagesTest.PDF");
+		PDFDocumentCopyingContext* copyingContext = pdfWriter.CreatePDFCopyingContext(scBasePath + "BasicTIFFImagesTest.PDF");
 		if(!copyingContext)
 		{
 			status = eFailure;

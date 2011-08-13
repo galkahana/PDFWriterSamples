@@ -14,8 +14,10 @@ using namespace std;
 
 // end pdfwriter library includes
 
-static const wstring scBasePath =  L"..\\Links\\Materials\\";
-static const wstring scSystemFontsPath = L"C:\\windows\\fonts\\";
+static const string scBasePath =  "..\\Links\\Materials\\";
+static const string scSystemFontsPath = "C:\\windows\\fonts\\";
+
+using namespace PDFHummus;
 
 int main(int argc, wchar_t* argv[])
 {
@@ -24,20 +26,20 @@ int main(int argc, wchar_t* argv[])
 
 	do
 	{
-		status = pdfWriter.StartPDF(scBasePath + L"Links.pdf",ePDFVersion13);
+		status = pdfWriter.StartPDF(scBasePath + "Links.pdf",ePDFVersion13);
 		if(status != eSuccess)
 			break;
 
 		PDFPage* page = new PDFPage();
 		page->SetMediaBox(PDFRectangle(0,0,595,842));
 
-		PDFFormXObject* soundCloudLogo = pdfWriter.CreateFormXObjectFromJPGFile(scBasePath + L"soundcloud_logo.jpg");
+		PDFFormXObject* soundCloudLogo = pdfWriter.CreateFormXObjectFromJPGFile(scBasePath + "soundcloud_logo.jpg");
 
 		PageContentContext* contentContext = pdfWriter.StartPageContentContext(page);
 		if(!contentContext)
 			break;
 
-		PDFUsedFont* font = pdfWriter.GetFontForFile(scSystemFontsPath + L"arial.ttf");
+		PDFUsedFont* font = pdfWriter.GetFontForFile(scSystemFontsPath + "arial.ttf");
 		if(!font)
 			break;
 
@@ -46,7 +48,7 @@ int main(int argc, wchar_t* argv[])
 		contentContext->k(0,0,0,1);
 		contentContext->Tf(font,1);
 		contentContext->Tm(11,0,0,11,90.024,709.54);
-		contentContext->Tj(L"http://pdfhummus.com");
+		contentContext->Tj("http://pdfhummus.com");
 		contentContext->ET();
 
 		// Draw soundcloud loog
@@ -64,10 +66,10 @@ int main(int argc, wchar_t* argv[])
 		// now let's attach some links.
 
 		// first, the link for the test:
-		pdfWriter.AttachURLLinktoCurrentPage(L"http://www.pdfhummus.com",PDFRectangle(87.75,694.56,198.76,720));
+		pdfWriter.AttachURLLinktoCurrentPage("http://www.pdfhummus.com",PDFRectangle(87.75,694.56,198.76,720));
 
 		// second, link for the logo.
-		pdfWriter.AttachURLLinktoCurrentPage(L"http://www.soundcloud.com",PDFRectangle(90.024,200,367.524,375));
+		pdfWriter.AttachURLLinktoCurrentPage("http://www.soundcloud.com",PDFRectangle(90.024,200,367.524,375));
 
 		status = pdfWriter.WritePageAndRelease(page);
 		if(status != eSuccess)
